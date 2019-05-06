@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_radio_stream"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:background="@color/black"
+    tools:context="com.bignerdranch.android.radiostreaming.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/stream_btn_layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/audioStreamBtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BBC Radio" />
+
+        <Button
+            android:id="@+id/audioStreamBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pop 80s" />
+
+        <Button
+            android:id="@+id/audioStreamBtn5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blues" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stream_btn_layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stream_btn_layout1"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/audioStreamBtn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hits" />
+        <Button
+            android:id="@+id/audioStreamBtn8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Piano" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stream_btn_layout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stream_btn_layout2"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/audioStreamBtn6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Metal" />
+        <Button
+            android:id="@+id/audioStreamBtn3"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="Jazz" />
+
+        <Button
+            android:id="@+id/audioStreamBtn7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alternative" />
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/stream_btn_layout3"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:id="@+id/audioPlayButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/sound_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/audioPlayButton">
+
+        <ImageButton
+            android:id="@+id/mute_button"
+            android:src="@drawable/ic_sound_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <SeekBar
+            android:id="@+id/seekBar1"
+            android:layout_width="275dp"
+            android:layout_height="match_parent"></SeekBar>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+
+    <com.chibde.visualizer.BarVisualizer
+        android:id="@+id/visualizer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/sound_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp" />
+</RelativeLayout>
